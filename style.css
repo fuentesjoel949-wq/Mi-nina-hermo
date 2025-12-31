@@ -1,0 +1,176 @@
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== BODY ===== */
+body {
+  min-height: 100vh;
+  background: radial-gradient(circle at bottom, #0b1026, #000);
+  font-family: 'Roboto', sans-serif;
+  color: #fff;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+/* ===== ESTRELLAS ===== */
+.stars {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background: radial-gradient(ellipse at bottom, #1b0033 0%, #000 100%);
+}
+
+/* ===== CONTENEDOR ===== */
+main {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  padding: 30px;
+  text-align: center;
+}
+
+/* ===== TÍTULO ===== */
+header {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #ffd6e0;
+}
+
+/* ===== SALUDO ===== */
+.saludo {
+  max-width: 700px;
+  margin: 0 auto 30px;
+  text-align: center;
+  line-height: 1.6;
+}
+
+/* ===== LIBRO ===== */
+#paginas {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  height: 420px;
+  margin: 30px auto;
+  perspective: 2000px;
+}
+
+.pagina {
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  background: #fffdf8;
+  color: #333;
+  padding: 35px;
+  box-shadow: inset 0 0 20px rgba(0,0,0,.15);
+  opacity: 0;
+  backface-visibility: hidden;
+  transition: transform 0.9s ease, opacity 0.4s;
+}
+
+.pagina.left {
+  left: 0;
+  border-radius: 15px 0 0 15px;
+  transform-origin: right center;
+}
+
+.pagina.right {
+  right: 0;
+  border-radius: 0 15px 15px 0;
+  transform-origin: left center;
+}
+
+.pagina.active {
+  opacity: 1;
+}
+
+.pagina.turn {
+  transform: rotateY(-180deg);
+  z-index: 10;
+}
+
+.poema {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+/* ===== BOTONES ===== */
+#toggleMusica, .botones button {
+  margin: 10px;
+  padding: 10px 20px;
+  background: #ff4d6d;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* ===== ESTRELLAS ANIMADAS ===== */
+.star {
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  opacity: 0.8;
+  animation:
+    twinkle 3s infinite ease-in-out,
+    floatStar 8s infinite linear;
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 1; }
+}
+
+@keyframes floatStar {
+  from { transform: translateY(0); }
+  to { transform: translateY(-100vh); }
+}
+
+/* ===== CORAZONES ===== */
+.heart {
+  position: fixed;
+  bottom: -30px;
+  width: 20px;
+  height: 20px;
+  transform: rotate(45deg);
+  animation: floatHeart linear forwards;
+  opacity: 0.9;
+  z-index: 3;
+}
+
+.heart::before,
+.heart::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: inherit;
+  border-radius: 50%;
+}
+
+.heart::before {
+  top: -10px;
+  left: 0;
+}
+
+.heart::after {
+  left: -10px;
+  top: 0;
+}
+
+@keyframes floatHeart {
+  to {
+    transform: translateY(-120vh) rotate(45deg);
+    opacity: 0;
+  }
+    }
