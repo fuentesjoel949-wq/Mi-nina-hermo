@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Para mi niña preciosa</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="stars" aria-hidden="true"></div>
+
+  <main role="main" aria-label="Libro de poemas románticos">
+
+    <header>Para mi niña preciosa</header>
+
+    <p class="saludo">
+      Hola, mi amor. Este libro es un pequeño refugio de versos, suspiros y sentimientos 
+      que nacen de lo más profundo de mi corazón.
+      <br><br>
+      Léelo con calma y recuerda siempre que eres mi niña preciosa 💖
+    </p>
+
+    <audio id="musicaFondo" autoplay loop preload="auto">
+      <source src="musica.mp3" type="audio/mpeg">
+      Tu navegador no soporta audio.
+    </audio>
+
+    <button id="toggleMusica">⏸️ Pausar música</button>
+
+    <section id="paginas" class="libro cerrado">
+      
+      <article class="pagina">
+        <div class="poema">
+          <p>Desde que llegaste a mi vida, todo tiene más sentido.</p>
+        </div>
+      </article>
+      <article class="pagina">
+        <div class="poema">
+          <p>Tu sonrisa es el lugar donde mi corazón descansa.</p>
+        </div>
+      </article>
+
+      <article class="pagina">
+        <div class="poema">
+          <p>No sabía que alguien podía ser hogar hasta que fuiste tú.</p>
+        </div>
+      </article>
+      <article class="pagina">
+        <div class="poema">
+          <p>Cada día contigo es una historia que quiero volver a leer.</p>
+        </div>
+      </article>
+
+      <article class="pagina">
+        <div class="poema">
+          <p>Eres mi pensamiento favorito al despertar.</p>
+        </div>
+      </article>
+      <article class="pagina">
+        <div class="poema">
+          <p>Mi sonrisa empieza donde tú apareces.</p>
+        </div>
+      </article>
+
+      <article class="pagina">
+        <div class="poema">
+          <p>Eres mi paz.</p>
+        </div>
+      </article>
+      <article class="pagina">
+        <div class="poema">
+          <p>Eres mi siempre.</p>
+        </div>
+      </article>
+
+      <article class="pagina">
+        <div class="poema">
+          <p>Este libro existe porque tú existes.</p>
+        </div>
+      </article>
+      <article class="pagina">
+        <div class="poema">
+          <p>Todo lo bonito empieza contigo.</p>
+        </div>
+      </article>
+
+      <article class="pagina">
+        <div class="poema">
+          <p>Gracias por ser tú.</p>
+        </div>
+      </article>
+      <article class="pagina">
+        <div class="poema">
+          <p>Fin… o tal vez solo el comienzo 💖</p>
+        </div>
+      </article>
+
+    </section>
+
+    <div class="botones">
+      <button id="prevBtn">Anterior</button>
+      <button id="nextBtn">Siguiente</button>
+    </div>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
